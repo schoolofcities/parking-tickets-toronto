@@ -1,3 +1,6 @@
+# script for getting the names of connecting streets for each centreline
+# also computes the length of each street
+
 import pandas as pd
 import geopandas as gpd
 import numpy as np
@@ -27,6 +30,13 @@ for index, street in dfs.iterrows():
     if i % 100 == 0:
         print(i)
         
+# also compute length for each centreline
+dfs.geometry = dfs.geometry.to_crs('epsg:32617')
+dfs["length"] = dfs.geometry.length.astype(int)
+dfs.geometry = dfs.geometry.to_crs('epsg:4326')
+
+print(dfs)
+
 # save as a new file
 dfs.to_file('data/centreline/centreline-with-connections.geojson')
     
