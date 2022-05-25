@@ -6,12 +6,10 @@ Parking ticket data can be downloaded from [here](https://open.toronto.ca/datase
 
 To map, we also need the City's Centreline data, downloaded from [here](https://open.toronto.ca/dataset/toronto-centreline-tcl/)
 
-These should be added to sub-folders under data
+These should be added to sub-folders under data before running any code/notebook
 
 ```
-- data
--- centreline
--- parking-tickets
+data/
+-- centreline/
+-- parking-tickets/
 ```
-
-
