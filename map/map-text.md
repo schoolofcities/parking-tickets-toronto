@@ -1,6 +1,6 @@
 # Mapping Parking Tickets in Toronto
 
-Over 22.8 million parking tickets were issued in the City of Toronto in the decade spanning 2011 to 2020, representing over QQQQQQ in fines. This map shows almost* all of these parking tickets.
+Over 22.8 million parking tickets were issued in the City of Toronto in the decade spanning 2011 to 2020, representing over 1 billion dollars in fines. This map shows almost* all of these parking tickets.
 
 Data on the locations of parking tickets are from the City of Toronto. We joined them to the City's centreline data representing streets in order to make this map. Both were available as open data.
 
