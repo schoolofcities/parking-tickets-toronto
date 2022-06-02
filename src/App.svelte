@@ -6,11 +6,18 @@
 
 <main>
 	<Top/>
-	<h1>Mapping Parking Tickets in Toronto</h1>
+	<div class="title">
+		<h1>Mapping Parking Tickets in Toronto</h1>
+	</div>
+	<div class="text">
+		<p>
+		Over <b>22.8 million</b> parking tickets were issued in the City of Toronto in the decade spanning <b>2011 to 2020</b>, representing over <b>1 billion</b> dollars in fines. This map shows almost* all of these parking tickets.
+		</p>
+	</div>
+	
 	<img src={map} alt="Toronto Parking Ticket Map" />
-	<p>
-		(Simple <a href="https://svelte.dev">Svelte</a> page to build upon from)
-	</p>
+	
+	
 	<Counter/>
 </main>
 
@@ -19,6 +26,7 @@
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
+	
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
@@ -31,10 +39,8 @@
 		margin: 0px;
 	}
 	
-
-
 	h1 {
-		color: #0D534D;
+		color: #ffffff;
 		text-transform: uppercase;
 		font-size: 4rem;
 		font-weight: 100;
@@ -43,9 +49,13 @@
 		max-width: 14rem;
 	}
 
-	p {
+	.text p {
+		width: 500px;
+		color: white;
+		text-align: left;
 		margin: 1rem auto;
-		line-height: 1.35;
+		line-height: 1.42;
+		font-size: 18px;
 	}
 
 	@media (min-width: 480px) {
