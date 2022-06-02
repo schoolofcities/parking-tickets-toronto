@@ -3,7 +3,7 @@
 </script>
 
 <div id="bar">
-	<img src={logo} alt="School of Cities" />
+	<a href="https://www.schoolofcities.utoronto.ca/"><img src={logo} alt="School of Cities"></a>
 </div>
 
 <style>
