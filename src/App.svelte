@@ -3,8 +3,6 @@
 	import MapPrint from './assets/parking-tickets-toronto.png'
 	import Legend from './assets/legend.svg'
 	import Top from './lib/TopSofC.svelte'
-
-
 </script>
 
 <main>
@@ -34,10 +32,18 @@
 		<p>
 		Data on the locations of <a href="https://open.toronto.ca/dataset/parking-tickets/">parking tickets</a> are from the City of Toronto. We joined them to the City's <a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Centreline</a> data representing streets in order to make this map. Both were available as open data.
 		</p>
-		<p id="footnote">
-		*The data on parking tickets only indicate addresses, not XY coordinates. Some of the addresses (less than 5%) could not be linked to streets due missing numbers or incorrect spellings.
+		<p>
+		The spatial distribution of parking tickets represents a combination of the supply and demand for curbside space and patterns of enforcement. 
 		</p>
+		<p>
+		Interestingly, there has been an overall decline in the number of tickets issued per year, but the total revenue has remained relatively stable (not accounting for inflation), except for 2020. 
+		</p>
+	</div>
 
+	<div class="info">
+		<p id="footnote">
+			*The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
+		</p>
 	</div>
 	
 
@@ -86,7 +92,7 @@
 		line-height: 1.42;
 		font-size: 18px;
 		padding: 10px; 	
-		font-family: Roboto, sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
 	.content a {
@@ -98,6 +104,23 @@
 	.content #bold {
 		color: #F1C500;
 		font-weight: bold;
+	}
+
+	.info {
+		margin: auto;
+		width: 500px;
+		border-top: solid 1px darkgray;
+	}
+
+	.info p {
+		width: 100%;
+		color: white;
+		text-align: left;
+		margin: 1rem auto;
+		line-height: 1.42;
+		font-size: 14px;
+		padding: 10px; 	
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
 	#map img {
