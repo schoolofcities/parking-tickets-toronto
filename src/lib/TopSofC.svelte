@@ -9,9 +9,12 @@
 <style>
 	#bar {
 		height: 50px;
-		background-color: #1E3765;
+		background-color: #121212;
 		margin-bottom: 20px;
-		border-bottom: 1px solid grey;
+		border-bottom: 1px solid rgb(54, 54, 54);
+	}
+	img {
+		color: blue;
 	}
 	img:hover {
 		opacity: 0.7;

@@ -6,27 +6,28 @@
 
 <main>
 	<Top/>
-	<div class="title">
+	<div class="content">
 		<h1>Mapping Parking Tickets in Toronto</h1>
-	</div>
-	<div class="text">
 		<p>
-		Over <b>22.8 million</b> parking tickets were issued in the City of Toronto in the decade spanning <b>2011 to 2020</b>, representing over <b>1 billion</b> dollars in fines. This map shows almost* all of these parking tickets.
+		Over <span id="bold">22.8 million</span> parking tickets were issued in the City of Toronto in the decade spanning <span id="bold">2011 to 2020</span>, representing over <span id="bold">1 billion</span> dollars in fines. This map shows almost* all of these parking tickets.
 		</p>
 	</div>
 	
 	<img src={map} alt="Toronto Parking Ticket Map" />
 	
-	
 	<Counter/>
 </main>
 
 <style>
-	:root {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	@font-face {
+		font-family: TradeGothicBold;
+		src: url("./assets/Trade Gothic LT Bold.ttf");
 	}
-	
+
+	/* :root {
+		font-family: TradeGothicBold, sans-serif;
+	} */
+
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
@@ -38,33 +39,49 @@
 		padding: 0px;
 		margin: 0px;
 	}
+
+	.content {
+		margin: auto;
+		max-width: 500px;
+
+	}
 	
-	h1 {
-		color: #ffffff;
-		text-transform: uppercase;
-		font-size: 4rem;
-		font-weight: 100;
+	.content h1 {
+		color: #F1C500;
+		font-size: 44px;
 		line-height: 1.1;
-		margin: 2rem auto;
-		max-width: 14rem;
+		font-family: TradeGothicBold, sans-serif;
 	}
 
-	.text p {
-		width: 500px;
+	.content p {
+		width: 100%;
+		max-width: 500px;
 		color: white;
 		text-align: left;
 		margin: 1rem auto;
 		line-height: 1.42;
 		font-size: 18px;
+		margin: 10px;
+		font-family: Roboto, sans-serif;
+	}
+
+	.content #bold {
+		color: #F1C500;
+		font-weight: bold;
+	}
+
+	img {
+		max-width: 1920px;
+		width: 100%;
 	}
 
 	@media (min-width: 480px) {
-	h1 {
-		max-width: none;
-	}
+		h1 {
+			max-width: none;
+		}
 
-	p {
-		max-width: none;
-	}
+		p {
+			max-width: none;
+		}
 	}
 </style>
