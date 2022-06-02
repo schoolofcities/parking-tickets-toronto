@@ -1,12 +1,13 @@
 <script>
-	import logo from './assets/logo.png'
+	import map from './assets/home-map.png'
 	import Counter from './lib/Counter.svelte'
+	import Top from './lib/TopSofC.svelte'
 </script>
 
 <main>
-	<div id="bar"></div>
-	<img src={logo} alt="School of Cities Logo" />
-	<h1>Hello world!</h1>
+	<Top/>
+	<h1>Mapping Parking Tickets in Toronto</h1>
+	<img src={map} alt="Toronto Parking Ticket Map" />
 	<p>
 		(Simple <a href="https://svelte.dev">Svelte</a> page to build upon from)
 	</p>
@@ -21,6 +22,7 @@
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
+		background-color: black;
 	}
 
 	main {
@@ -28,16 +30,8 @@
 		padding: 0px;
 		margin: 0px;
 	}
-	#bar {
-		height: 50px;
-		background-color: #1E3765;
-		margin-bottom: 20px;
-	}
+	
 
-	img {
-		height: 16rem;
-		width: 16rem;
-	}
 
 	h1 {
 		color: #0D534D;
