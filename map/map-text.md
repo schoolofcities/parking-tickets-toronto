@@ -6,5 +6,4 @@ Data on the locations of parking tickets are from the City of Toronto. We joined
 
 The spatial distribution of parking tickets represents a combination of the supply and demand for curbside space and patterns of enforcement. 
 
-
 *The data on parking tickets only indicate addresses, not XY coordinates. Some of the addresses (less than 5%) could not be linked to streets due missing numbers or incorrect spellings.
