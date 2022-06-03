@@ -22,8 +22,6 @@
 		<img src={MapPage} alt="Toronto Parking Ticket Map" />
 	</div>
 	
-	
-
 	<div class="content">
 		<div id="legend">
 			<img src={Legend} alt="Legend">
@@ -32,22 +30,24 @@
 		<p>
 		Click <a href={MapPrint}>here</a> for a high-resolution version of this map
 		</p>
-		<p>
-		Data on the locations of <a href="https://open.toronto.ca/dataset/parking-tickets/">parking tickets</a> are from the City of Toronto. We joined them to the City's <a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Centreline</a> data representing streets in order to make this map. Both were available as open data.
-		</p>
+		
 		<p>
 		The spatial distribution of parking tickets represents a combination of the supply and demand for curbside space and patterns of enforcement. 
 		</p>
 		<p>
-		Interestingly, there has been an overall decline in the number of tickets issued per year, but the total revenue has remained relatively stable (not accounting for inflation), except for 2020. 
+		Interestingly, there has been an overall decline in the number of tickets issued per year:
 		</p>
+		<LineChart data={data} variable="count"/> 
+		<p>
+		But the total revenue has remained relatively stable (not accounting for inflation), except for 2020. 
+		</p>
+		<LineChart data={data} variable="set_fine_amount"/> 
 	</div>
 
-	<LineChart {data}/> 
-
+	
 	<div class="info">
 		<p id="footnote">
-			*The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
+			Data on the locations of <a href="https://open.toronto.ca/dataset/parking-tickets/">parking tickets</a> are from the City of Toronto. We joined them to the City's <a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Centreline</a> data representing streets in order to make this map. Both were available as open data. The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
 		</p>
 	</div>
 	
@@ -98,7 +98,7 @@
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
-	.content a {
+	a {
 		color: #6FC7EA;
 		text-decoration: none;
 		font-weight: bold;
@@ -112,7 +112,6 @@
 	.info {
 		margin: auto;
 		width: 500px;
-		border-top: solid 1px darkgray;
 	}
 
 	.info p {
@@ -147,7 +146,6 @@
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		margin-top: -10px;
 		margin-left: -11px;
-		
 	}
 
 	@media (min-width: 480px) {
