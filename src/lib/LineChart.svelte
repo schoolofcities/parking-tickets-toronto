@@ -1,50 +1,51 @@
 <script>
-	import { scaleBand, scaleLinear } from "d3-scale";
-  
+
+	import { extent, scaleLinear } from "d3";
+	import Axis from "./Axis.svelte";
+	
 	export let data;
-  
-	const width = 800;
-	const height = 600;
-  
-	const margin = { top: 20, right: 20, bottom: 20, left: 180 };
+
+	const margin = { top: 15, bottom: 50, left: 70, right: 20 };
+	const width = 500;
+	const height = 200;
 	const innerHeight = height - margin.top - margin.bottom;
 	const innerWidth = width - margin.left - margin.right;
-  
-	$: xDomain = data.map((d) => d.year);
-	$: yDomain = data.map((d) => +d.count);
-  
-	$: yScale = scaleBand().domain(xDomain).range([0, innerHeight]).padding(0.1);
+
 	$: xScale = scaleLinear()
-	  .domain([0, Math.max.apply(null, yDomain)])
-	  .range([0, innerWidth]);
+	  .domain([2011,2020])
+	  .range([0, innerWidth])
+	$: yScale = scaleLinear()
+	  .domain([0,3000000])
+	  .range([innerHeight, 0]);
+
 </script>
   
-  <svg {width} {height}>
+<svg {width} {height}>
 	<g transform={`translate(${margin.left},${margin.top})`}>
-	  {#each xScale.ticks() as tickValue}
-		<g transform={`translate(${xScale(tickValue)},0)`}>
-		  <line y2={innerHeight} stroke="white" />
-		  <text text-anchor="middle" dy=".71em" y={innerHeight + 3}>
-			{tickValue}
-		  </text>
-		</g>
-	  {/each}
-	  {#each data as d}
-		<text
-		  text-anchor="end"
-		  x="-3"
-		  dy=".32em"
-		  y={yScale(d.year) + yScale.bandwidth() / 2}
-		>
-		  {d.year}
-		</text>
-		<rect
-		  x="0"
-		  y={yScale(d.year)}
-		  width={xScale(d.count)}
-		  height={yScale.bandwidth()}
-		  fill="white"
-		/>
-	  {/each}
+	
+		<Axis {innerHeight} {margin} scale={xScale} position="bottom" />
+		<Axis {innerHeight} {margin} scale={yScale} position="left" />
+	
+		<text transform={`translate(${-50},${innerHeight / 2}) rotate(-90)`}></text>
+
+		{#each data as data, i}
+			<circle
+			cx={xScale(data.year)}
+			cy={yScale(data.count)}
+			r="5"
+			/>
+		{/each}
+		
+		<text x={innerWidth / 2} y={innerHeight + 35}></text>
 	</g>
-  </svg>
+</svg>
+
+<style>
+	circle {
+		fill: #F1C500;
+	}
+	text {
+		fill: white;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+</style>

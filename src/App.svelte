@@ -3,6 +3,7 @@
 	import MapPrint from './assets/parking-tickets-toronto.png'
 	import Legend from './assets/legend.svg'
 	import Top from './lib/TopSofC.svelte'
+	import BarChart from './lib/BarChart.svelte'
 	import LineChart from './lib/LineChart.svelte'
 	import data from './lib/tickets-by-year.json'
 </script>
@@ -42,7 +43,7 @@
 		</p>
 	</div>
 
-	<LineChart {data} />
+	<LineChart {data}/> 
 
 	<div class="info">
 		<p id="footnote">
@@ -50,9 +51,6 @@
 		</p>
 	</div>
 	
-	
-
-
 </main>
 
 <style>
