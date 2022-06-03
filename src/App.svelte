@@ -4,6 +4,7 @@
 	import Legend from './assets/legend.svg'
 	import Top from './lib/TopSofC.svelte'
 	import LineChart from './lib/LineChart.svelte'
+	import data from './lib/tickets-by-year.json'
 </script>
 
 <main>
@@ -41,13 +42,15 @@
 		</p>
 	</div>
 
+	<LineChart {data} />
+
 	<div class="info">
 		<p id="footnote">
 			*The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
 		</p>
 	</div>
 	
-	<LineChart/>
+	
 
 
 </main>
