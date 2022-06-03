@@ -25,9 +25,16 @@
     .x((d)  =>  xScale(d.year))
     .y((d)  =>  yScale(d[variable]))(data);
 
+	let selected_datapoint = undefined;
+	let mouse_x, mouse_y;
+
+	const setMousePosition = function(event) {
+		mouse_x = event.clientX;
+		mouse_y = event.clientY;
+	}
 
 </script>
-  
+
 <svg {width} {height}>
 	<g transform={`translate(${margin.left},${margin.top})`}>
 	
@@ -43,12 +50,20 @@
 			cx={xScale(data.year)}
 			cy={yScale(data[variable])}
 			r="5"
-			/>
+			on:mouseover={(event) => {selected_datapoint = data; setMousePosition(event)}}
+      		on:mouseout={() => {selected_datapoint = undefined}}/>
+			/>	
 		{/each}
 
 		<text x={innerWidth / 2} y={innerHeight + 35}></text>
 	</g>
 </svg>
+
+{#if selected_datapoint != undefined}
+	<div id="tooltip" style="left: {mouse_x}px; top: {mouse_y - 25}px">
+	{selected_datapoint.count}
+	</div>
+{/if}
 
 <style>
 	circle {
@@ -67,4 +82,11 @@
 		stroke-width: 2px;
 		fill: none;
 	}
+	#tooltip {
+		position: fixed;
+		color: white;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 10px;
+	}
+
 </style>

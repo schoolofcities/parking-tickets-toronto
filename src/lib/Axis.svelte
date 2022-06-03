@@ -22,7 +22,6 @@
 	  }
 	  select(g).call(axis);
 	}
-	console.log(variable)
   </script>
   
   <g class="axis" bind:this={g} {transform} />

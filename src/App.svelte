@@ -39,14 +39,16 @@
 		</p>
 		<LineChart data={data} variable="count"/> 
 		<p>
-		But the total revenue has remained relatively stable (not accounting for inflation), except for 2020. 
+		But the total revenue has remained more stable (not accounting for inflation), except for 2020. 
 		</p>
 		<LineChart data={data} variable="set_fine_amount"/> 
 	</div>
 
 	
 	<div class="info">
+		
 		<p id="footnote">
+			<b>Methods & Data:</b><br><br>
 			Data on the locations of <a href="https://open.toronto.ca/dataset/parking-tickets/">parking tickets</a> are from the City of Toronto. We joined them to the City's <a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Centreline</a> data representing streets in order to make this map. Both were available as open data. The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
 		</p>
 	</div>
