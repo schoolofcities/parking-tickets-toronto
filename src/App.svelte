@@ -3,6 +3,7 @@
 	import MapPrint from './assets/parking-tickets-toronto.png'
 	import Legend from './assets/legend.svg'
 	import Top from './lib/TopSofC.svelte'
+	import LineChart from './lib/LineChart.svelte'
 </script>
 
 <main>
@@ -46,6 +47,7 @@
 		</p>
 	</div>
 	
+	<LineChart/>
 
 
 </main>
