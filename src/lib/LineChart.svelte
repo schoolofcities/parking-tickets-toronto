@@ -1,6 +1,6 @@
 <script>
 
-	import { scaleLinear, line, curveNatural } from "d3";
+	import { scaleLinear, line } from "d3";
 	import Axis from "./Axis.svelte";
 	
 	export let data;
@@ -33,6 +33,8 @@
 		mouse_y = event.clientY;
 	}
 
+	
+
 </script>
 
 <svg {width} {height}>
@@ -52,7 +54,7 @@
 			r="5"
 			on:mouseover={(event) => {selected_datapoint = data; setMousePosition(event)}}
       		on:mouseout={() => {selected_datapoint = undefined}}/>
-			/>	
+			/>
 		{/each}
 
 		<text x={innerWidth / 2} y={innerHeight + 35}></text>
@@ -61,7 +63,7 @@
 
 {#if selected_datapoint != undefined}
 	<div id="tooltip" style="left: {mouse_x}px; top: {mouse_y - 25}px">
-	{selected_datapoint.count}
+	{selected_datapoint.count.toLocaleString()}
 	</div>
 {/if}
 
