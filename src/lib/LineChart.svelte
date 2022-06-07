@@ -62,9 +62,15 @@
 </svg>
 
 {#if selected_datapoint != undefined}
-	<div id="tooltip" style="left: {mouse_x}px; top: {mouse_y - 25}px">
-	{selected_datapoint.count.toLocaleString()}
-	</div>
+	{#if variable === "count"}
+		<div id="tooltip" style="left: {mouse_x}px; top: {mouse_y - 25}px">
+		{selected_datapoint.count.toLocaleString()}
+		</div>
+	{:else}
+		<div id="tooltip" style="left: {mouse_x}px; top: {mouse_y - 25}px">
+		${selected_datapoint.set_fine_amount.toLocaleString()}
+		</div>
+	{/if}
 {/if}
 
 <style>

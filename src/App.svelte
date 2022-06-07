@@ -3,7 +3,6 @@
 	import MapPrint from './assets/parking-tickets-toronto.png'
 	import Legend from './assets/legend.svg'
 	import Top from './lib/TopSofC.svelte'
-	import BarChart from './lib/BarChart.svelte'
 	import LineChart from './lib/LineChart.svelte'
 	import data from './lib/tickets-by-year.json'
 </script>
@@ -60,11 +59,7 @@
 		font-family: TradeGothicBold;
 		src: url("./assets/Trade Gothic LT Bold.ttf");
 	}
-
-	/* :root {
-		font-family: TradeGothicBold, sans-serif;
-	} */
-
+	
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
