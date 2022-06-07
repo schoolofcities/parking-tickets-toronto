@@ -24,7 +24,7 @@
 	<div class="content">
 		<div id="legend">
 			<img src={Legend} alt="Legend">
-			<p>Number of parking tickets per 100</p>
+			<p>Number of parking tickets per 100m </p>
 		</div>
 		<p>
 		Click <a href={MapPrint}>here</a> for a high-resolution version of this map
@@ -51,7 +51,7 @@
 			Data on the locations of <a href="https://open.toronto.ca/dataset/parking-tickets/">parking tickets</a> are from the City of Toronto. We joined them to the City's <a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Centreline</a> data representing streets in order to make this map. Both were available as open data. The data on parking tickets only indicate addresses, not XY coordinates. Some of the parking tickets (~5%) could not be linked to streets due to missing address numbers or incorrect spellings.
 		</p>
 	</div>
-	
+
 </main>
 
 <style>
@@ -59,7 +59,7 @@
 		font-family: TradeGothicBold;
 		src: url("./assets/Trade Gothic LT Bold.ttf");
 	}
-	
+
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
