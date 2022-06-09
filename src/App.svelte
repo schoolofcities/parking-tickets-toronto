@@ -75,6 +75,7 @@
 	.content {
 		margin: auto;
 		width: 500px;
+		padding: 10px;
 	}
 	
 	.content h1 {
@@ -88,10 +89,8 @@
 		width: 100%;
 		color: white;
 		text-align: left;
-		margin: 1rem auto;
-		line-height: 1.42;
+		line-height: 1.62;
 		font-size: 18px;
-		padding: 10px; 	
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
@@ -109,16 +108,15 @@
 	.info {
 		margin: auto;
 		width: 500px;
+		padding: 10px; 
 	}
 
 	.info p {
 		width: 100%;
 		color: white;
 		text-align: left;
-		margin: 1rem auto;
 		line-height: 1.42;
 		font-size: 14px;
-		padding: 10px; 	
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
@@ -141,17 +139,7 @@
 		text-align: center;
 		color: white;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		margin-top: -10px;
-		margin-left: -11px;
+		margin-top: -3px;
 	}
 
-	@media (min-width: 480px) {
-		h1 {
-			max-width: none;
-		}
-
-		p {
-			max-width: none;
-		}
-	}
 </style>

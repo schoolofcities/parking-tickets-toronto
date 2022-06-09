@@ -12,7 +12,10 @@
 		background-color: #121212;
 		margin-bottom: 20px;
 		border-bottom: 1px solid rgb(54, 54, 54);
+		width: 100%;
 		min-width: 500px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	img {
 		color: blue;
