@@ -43,7 +43,6 @@
 		<LineChart data={data} variable="set_fine_amount"/> 
 	</div>
 
-	
 	<div class="info">
 		
 		<p id="footnote">
@@ -131,7 +130,7 @@
 	}
 
 	#legend img {
-		margin-top: -150px;
+		margin-top: -1	50px;
 	}
 
 	#legend p {
