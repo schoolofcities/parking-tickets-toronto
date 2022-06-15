@@ -11,6 +11,7 @@
 	<Top/>
 
 	<div class="content">
+		<br><br>
 		<h1>Mapping Parking Tickets in Toronto</h1>
 		<p>
 		Over <span id="bold">22.8 million</span> parking tickets were issued in the City of Toronto in the decade spanning <span id="bold">2011 to 2020</span>, representing over <span id="bold">1 billion</span> dollars in fines. This map shows almost<a href="#footnote">*</a> all of these parking tickets.
@@ -20,12 +21,14 @@
 	<div id="map">
 		<img src={MapPage} alt="Toronto Parking Ticket Map" />
 	</div>
+
+	<div id="legend">
+		<img src={Legend} alt="Legend">
+		<p>Number of parking tickets per 100m </p>
+	</div>
 	
 	<div class="content">
-		<div id="legend">
-			<img src={Legend} alt="Legend">
-			<p>Number of parking tickets per 100m </p>
-		</div>
+		
 		<p>
 		Click <a href={MapPrint}>here</a> for a high-resolution version of this map
 		</p>
@@ -73,7 +76,9 @@
 
 	.content {
 		margin: auto;
-		width: 500px;
+		max-width: 500px;
+		min-width: 300px;
+		width: 100%;
 		padding: 10px;
 	}
 	
@@ -106,7 +111,9 @@
 
 	.info {
 		margin: auto;
-		width: 500px;
+		max-width: 500px;
+		min-width: 300px;
+		width: 100%;
 		padding: 10px; 
 	}
 
@@ -121,16 +128,23 @@
 
 	#map img {
 		max-width: 1920px;
-		min-width: 500px;
+		min-width: 300px;
 		width: 100%;
 	} 
 
 	#legend {
-		width: 500px;
+		margin: auto;
+		max-width: 500px;
+		min-width: 300px;
+		margin-top: -52px;
+		width: 100%;
 	}
 
 	#legend img {
 		margin-top: -1	50px;
+		/* max-width: 500px;
+		min-width: 300px; */
+		width: 100%;
 	}
 
 	#legend p {
