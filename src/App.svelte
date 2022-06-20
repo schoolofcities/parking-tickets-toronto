@@ -76,16 +76,16 @@
 
 	.content {
 		margin: auto;
-		max-width: 550px;
+		max-width: 600px;
 		min-width: 300px;
-		width: 100%;
-		padding: 10px;
+		width: calc(100% - 60px);
+		padding: 30px;
 	}
 	
 	.content h1 {
 		color: #F1C500;
-		font-size: 44px;
-		line-height: 1.1;
+		font-size: 39px;
+		line-height: 1.3;
 		font-family: TradeGothicBold, sans-serif;
 	}
 
@@ -111,10 +111,10 @@
 
 	.info {
 		margin: auto;
-		max-width: 500px;
+		max-width: 600px;
 		min-width: 300px;
-		width: 100%;
-		padding: 10px; 
+		width: calc(100% - 60px);
+		padding: 30px;
 	}
 
 	.info p {

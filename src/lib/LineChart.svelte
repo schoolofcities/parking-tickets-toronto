@@ -89,6 +89,7 @@
 
 <style>
 	#container {
+		margin: 0 auto;
 		padding-left: 0px;
 		max-width: 420px;
 	}
