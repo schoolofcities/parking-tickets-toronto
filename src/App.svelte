@@ -1,5 +1,5 @@
 <script>
-	import MapPage from "./assets/home-map.png";
+	import MapPage from "./assets/parking-tickets-toronto-web.png";
 	import MapPrint from "./assets/parking-tickets-toronto.png";
 	import Legend from "./assets/legend.svg";
 	import Top from "./lib/TopSofC.svelte";
@@ -37,7 +37,6 @@
 			Click <a href={MapPrint}>here</a> for a high-resolution version of this
 			map
 		</p>
-
 		<p>
 			The spatial distribution of parking tickets represents a combination
 			of the supply and demand for curbside space and patterns of
@@ -140,9 +139,9 @@
 		width: calc(100% - 60px);
 		padding: 30px;
 		padding-top: 20px;
-		border-top: solid 1px rgb(255, 255, 255, 0.1);
+		border-top: solid 1px rgb(255, 255, 255, 0.15);
 	}
-	s .info p {
+	.info p {
 		width: 100%;
 		color: white;
 		text-align: left;
@@ -150,6 +149,10 @@
 		font-size: 14px;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 			Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	}
+
+	#map {
+		margin-top: -50px;
 	}
 
 	#map img {

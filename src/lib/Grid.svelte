@@ -6,6 +6,7 @@
 	export let position;
 	export let scale;
 	export let width;
+	
 	let transform;
 	let g;
 
@@ -32,6 +33,6 @@
 <style>
 	.grid {
 		color: white;
-		opacity: 0.1;
+		opacity: 0.15;
 	}
 </style>
