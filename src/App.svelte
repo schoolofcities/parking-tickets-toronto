@@ -115,6 +115,8 @@
 		min-width: 300px;
 		width: calc(100% - 60px);
 		padding: 30px;
+		padding-top: 20px;
+		border-top: solid 1px rgb(255, 255, 255, 0.1);
 	}
 
 	.info p {

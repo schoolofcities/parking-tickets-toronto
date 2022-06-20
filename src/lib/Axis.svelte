@@ -9,38 +9,63 @@
 	export let width;
 	let transform;
 	let g;
-	
-	$: console.log(width)
 
 	$: {
-	  select(g).selectAll("*").remove();
-	  let axis;
+		select(g).selectAll("*").remove();
+		let axis;
 
-	  console.log(width)
+		switch (position) {
+			case "bottom":
+				if (Number(width) > 350) {
+					axis = axisBottom(scale).tickFormat(
+						(d, i) =>
+							[
+								"2011",
+								"2012",
+								"2013",
+								"2014",
+								"2015",
+								"2016",
+								"2017",
+								"2018",
+								"2019",
+								"2020",
+							][i]
+					);
+					transform = `translate(0, ${innerHeight})`;
+				} else {
+					axis = axisBottom(scale).tickFormat(
+						(d, i) =>
+							[
+								"",
+								"2012",
+								"",
+								"2014",
+								"",
+								"2016",
+								"",
+								"2018",
+								"",
+								"2020",
+							][i]
+					);
+					transform = `translate(0, ${innerHeight})`;
+				}
+				break;
+			case "left":
+				axis = axisLeft(scale).ticks(3).tickSizeOuter(0);
+				transform = `translate(${margin}, 0)`;
+		}
 
-	  switch (position) {
-		case "bottom":
-		  if (Number(width) > 350) {
-			axis = axisBottom(scale).tickFormat((d, i) => ["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"][i]);
-			transform = `translate(0, ${innerHeight})`;}
-		  else {
-			axis = axisBottom(scale).tickFormat((d, i) => ["","2012","","2014","","2016","","2018","","2020"][i]);
-		 	transform = `translate(0, ${innerHeight})`;
-		  }
-		  break;
-		case "left":
-		  axis = axisLeft(scale).ticks(3).tickSizeOuter(0);
-		  transform = `translate(${margin}, 0)`;
-	  }
-	  select(g).call(axis);
+		select(g).call(axis);
 	}
-  </script>
-  
-  <g class="axis" bind:this={g} {transform} />
+</script>
 
-  <style>
+<g class="axis" bind:this={g} {transform} />
+
+<style>
 	.axis {
 		color: white;
 		opacity: 0.62;
 	}
-  </style>
+</style>

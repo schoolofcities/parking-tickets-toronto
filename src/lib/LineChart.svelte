@@ -1,6 +1,7 @@
 <script>
 	import { scaleLinear, line } from "d3";
 	import Axis from "./Axis.svelte";
+	import Grid from "./Grid.svelte";
 
 	export let data;
 	export let variable;
@@ -12,7 +13,7 @@
 	const innerHeight = height - margin.top - margin.bottom;
 	$: innerWidth = divWidth - margin.left - margin.right;
 
-	var maxValue = variable === "count" ? 3000000 : 120000000;
+	var maxValue = variable === "count" ? 3000000 : 150000000;
 
 	$: xScale = scaleLinear().domain([2011, 2020]).range([0, innerWidth]);
 	$: yScale = scaleLinear().domain([0, maxValue]).range([innerHeight, 0]);
@@ -45,8 +46,9 @@
 				{margin}
 				scale={yScale}
 				position="left"
-				width=9999
+				width="9999"
 			/>
+			<Grid {margin} scale={yScale} position="left" width={innerWidth} />
 
 			<text
 				transform={`translate(${-50},${innerHeight / 2}) rotate(-90)`}
