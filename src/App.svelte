@@ -76,7 +76,7 @@
 
 	.content {
 		margin: auto;
-		max-width: 500px;
+		max-width: 550px;
 		min-width: 300px;
 		width: 100%;
 		padding: 10px;
