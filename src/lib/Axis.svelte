@@ -1,20 +1,32 @@
 <script>
-	import { select, selectAll } from "d3-selection";
+	import { select } from "d3-selection";
 	import { axisBottom, axisLeft } from "d3-axis";
+
 	export let innerHeight;
 	export let margin;
 	export let position;
 	export let scale;
-	export let variable;
+	export let width;
 	let transform;
 	let g;
+	
+	$: console.log(width)
+
 	$: {
 	  select(g).selectAll("*").remove();
 	  let axis;
+
+	  console.log(width)
+
 	  switch (position) {
 		case "bottom":
-		  axis = axisBottom(scale).tickFormat((d, i) => ["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"][i]);
-		  transform = `translate(0, ${innerHeight})`;
+		  if (Number(width) > 350) {
+			axis = axisBottom(scale).tickFormat((d, i) => ["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"][i]);
+			transform = `translate(0, ${innerHeight})`;}
+		  else {
+			axis = axisBottom(scale).tickFormat((d, i) => ["","2012","","2014","","2016","","2018","","2020"][i]);
+		 	transform = `translate(0, ${innerHeight})`;
+		  }
 		  break;
 		case "left":
 		  axis = axisLeft(scale).ticks(3).tickSizeOuter(0);

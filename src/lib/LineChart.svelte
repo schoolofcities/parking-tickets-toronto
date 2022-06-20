@@ -38,14 +38,14 @@
 				{margin}
 				scale={xScale}
 				position="bottom"
-				{variable}
+				width={divWidth}
 			/>
 			<Axis
 				{innerHeight}
 				{margin}
 				scale={yScale}
 				position="left"
-				{variable}
+				width=9999
 			/>
 
 			<text
