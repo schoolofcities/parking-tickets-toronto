@@ -152,7 +152,7 @@
 	}
 
 	#map {
-		margin-top: -50px;
+		margin-top: -25px;
 	}
 
 	#map img {
