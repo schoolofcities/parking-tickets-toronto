@@ -7,8 +7,11 @@
 	export let position;
 	export let scale;
 	export let width;
+	export let variable;
 	let transform;
 	let g;
+
+	console.log(variable)
 
 	$: {
 		select(g).selectAll("*").remove();
@@ -53,8 +56,16 @@
 				}
 				break;
 			case "left":
-				axis = axisLeft(scale).ticks(3).tickSizeOuter(0);
-				transform = `translate(${margin}, 0)`;
+				if (variable === "count") {
+					axis = axisLeft(scale).ticks(3).tickSizeOuter(0);
+					transform = `translate(${margin}, 0)`;
+				} else {
+					axis = axisLeft(scale).ticks(3).tickSizeOuter(0).tickFormat(
+						(d, i) =>
+							["0","$50,000,000","$100,000,000","$150,000,000"][i]
+					);
+					transform = `translate(${margin}, 0)`;
+				}	
 		}
 
 		select(g).call(axis);

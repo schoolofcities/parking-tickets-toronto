@@ -6,7 +6,7 @@
 	export let data;
 	export let variable;
 
-	const margin = { top: 15, bottom: 25, left: 75, right: 20 };
+	const margin = { top: 15, bottom: 25, left: 80, right: 20 };
 	let divWidth;
 
 	const height = 150;
@@ -40,6 +40,7 @@
 				scale={xScale}
 				position="bottom"
 				width={divWidth}
+				variable={variable}
 			/>
 			<Axis
 				{innerHeight}
@@ -47,6 +48,7 @@
 				scale={yScale}
 				position="left"
 				width="9999"
+				variable={variable}
 			/>
 			<Grid {margin} scale={yScale} position="left" width={innerWidth} />
 

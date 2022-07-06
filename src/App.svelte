@@ -18,7 +18,7 @@
 			in the City of Toronto in the decade spanning
 			<span id="bold">2011 to 2020</span>, representing over
 			<span id="bold">1 billion</span>
-			dollars in fines. This map shows almost<a href="#footnote">*</a> all
+			dollars in fines. This map shows almost all
 			of these parking tickets.
 		</p>
 	</div>
