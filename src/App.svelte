@@ -13,6 +13,7 @@
 	<div class="content">
 		<br /><br />
 		<h1>Mapping Parking Tickets in Toronto</h1>
+		<p id="author"><a href="https://jamaps.github.io">Jeff Allen</a> | July 2022</p>
 		<p>
 			Over <span id="bold">22.8 million</span> parking tickets were issued
 			in the City of Toronto in the decade spanning
@@ -121,6 +122,12 @@
 			Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	}
 
+	#author {
+		text-align: center;
+		padding-bottom: 21px;
+		border-bottom: solid 1px rgb(255, 255, 255, 0.25);
+	}
+
 	a {
 		color: #6fc7ea;
 		text-decoration: none;
@@ -139,7 +146,7 @@
 		width: calc(100% - 60px);
 		padding: 30px;
 		padding-top: 20px;
-		border-top: solid 1px rgb(255, 255, 255, 0.15);
+		border-top: solid 1px rgb(255, 255, 255, 0.25);
 	}
 	.info p {
 		width: 100%;
