@@ -1,6 +1,10 @@
-# parking-tickets-toronto
+![hi]("/map/parking-tickets-toronto-web.png")
 
-Processing Toronto's open data on the location, type, and $ of parking tickets.
+## parking-tickets-toronto
+
+Visualizing Toronto's open data on the location, type, and $ of parking tickets.
+
+https://schoolofcities.github.io/parking-tickets-toronto/
 
 Parking ticket data can be downloaded from [here](https://open.toronto.ca/dataset/parking-tickets/)
 
