@@ -1,4 +1,4 @@
-![hi]("/map/parking-tickets-toronto-web.png")
+![parking-tickets-toronto](./map/parking-tickets-toronto.png)
 
 ## parking-tickets-toronto
 
