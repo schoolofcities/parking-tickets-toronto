@@ -70,8 +70,7 @@
 			as open data. The data on parking tickets only indicate addresses, not
 			XY coordinates. Some of the parking tickets (~5%) could not be linked
 			to streets due to missing address numbers or incorrect spellings. Code
-			for this linking as well as visualization on this page were created by
-			<a href="https://jamaps.github.io">Jeff Allen</a> and are on
+			for this linking (in Python) as well as visualization on this page (via D3, QGIS, and Inkscape) are on
 			<a href="https://github.com/schoolofcities/parking-tickets-toronto"
 				>GitHub</a
 			>.
