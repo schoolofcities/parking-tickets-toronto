@@ -1,6 +1,6 @@
 <script>
 	import MapPage from "./assets/parking-tickets-toronto-web.png";
-	import MapPrint from "./assets/parking-tickets-toronto.png";
+	// import MapPrint from "https://raw.githubusercontent.com/schoolofcities/parking-tickets-toronto/main/map/parking-tickets-toronto.png";
 	import Legend from "./assets/legend.svg";
 	import Top from "./lib/TopSofC.svelte";
 	import LineChart from "./lib/LineChart.svelte";
@@ -35,7 +35,7 @@
 
 	<div class="content">
 		<p>
-			Click <a href={MapPrint}>here</a> for a high-resolution version of this
+			Click <a href="https://raw.githubusercontent.com/schoolofcities/parking-tickets-toronto/main/map/parking-tickets-toronto.png">here</a> for a high-resolution version of this
 			map
 		</p>
 		<p>
